@@ -1,0 +1,14 @@
+@import '../../../styles/colors.scss';
+
+.button-secondary-fj {
+    background: $black;
+    border: 2px solid $yellow;
+    color: $yellow;
+    outline: none;
+    font-size: 16px;
+    border-radius: 10px;
+    font-weight: 700;
+    padding: 15px;
+    cursor: pointer;
+    width: 100%;
+}

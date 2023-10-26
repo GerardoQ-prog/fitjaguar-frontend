@@ -1,0 +1,43 @@
+@import "../../../styles/colors.scss";
+
+.tabs-home {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+
+    .tabs {
+        position: relative;
+        width: auto;
+
+        &__container {
+            position: relative;
+            display: flex;
+            max-width: 420px;
+            width: 100%;
+        }
+
+        &__item {
+            cursor: pointer;
+            padding: 10px 0px;
+            min-width: 140px;
+            text-align: center;
+            font-weight: 700;
+            color: $gray;
+            font-size: 20px;
+
+            &--active {
+                padding: 10px 0px;
+                color: $yellow;
+                transition: all 0.5s ease;
+            }
+        }
+
+        &__selector {
+            position: absolute;
+            border: 1px solid $yellow;
+            width: 140px;
+            bottom: 0;
+            transition: 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+    }
+}

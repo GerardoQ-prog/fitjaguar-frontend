@@ -1,0 +1,37 @@
+@import '../../../styles/colors.scss';
+
+.spotlight {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding-top: 120px;
+    z-index: 2;
+    transform: translate(1);
+
+    &__search {
+        background: $black;
+        width: 100%;
+        max-width: 600px;
+        max-height: 50px;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        border-radius: 5px;
+
+        input {
+            background: transparent;
+            border: none;
+            outline: none;
+            color: $white;
+            font-size: 18px;
+            width: 100%;
+        }
+
+    }
+}

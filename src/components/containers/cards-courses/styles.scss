@@ -1,0 +1,27 @@
+@import '../../../styles/colors.scss';
+
+.cards-courses {
+    max-width: 1000px;
+    margin: 0px auto 30px auto;
+    padding: 20px;
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        span {
+            cursor: pointer;
+            color: $yellow;
+            text-decoration: underline;
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+}

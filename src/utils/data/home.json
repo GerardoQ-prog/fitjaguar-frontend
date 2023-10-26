@@ -1,0 +1,165 @@
+{
+    "name": "Home",
+    "title": "Enciende o potencia tu pasión por el fitness con nosotros.",
+    "subtitle": "FitJaguar es la plataforma que te conecta con los mejores del entrenamiento.",
+    "image": "/images/home/banner.png",
+    "companies": [
+        {
+            "image": "/images/home/about/information.png"
+        },
+        {
+            "image": "/images/home/about/information.png"
+        }
+    ],
+    "information": {
+        "title": "Te ayudamos a encontrar al experto ideal para mejorar en tus entrenamientos.",
+        "description": "Descubre la experiencia de interactuar con estudiantes, atletas y colegas de todo el mundo. Con FitJaguar podrás obtener mejores resultados.",
+        "image": "/images/home/about/information.png"
+    },
+    "suscription": {
+        "title": "Inscríbete en la plataforma dedicada a hacerte crecer en el mundo Fitness",
+        "subtitle": "Con FitJaguar accede a miles de posibilidades para mejorar tus entrenamientos",
+        "items": [
+            {
+                "name": "Cursos",
+                "title": "Cursos 100% aplicables a tu entrenamiento",
+                "description": "Aprende, entiende y valida tus conocimientos a través de nuestro aplicativo.",
+                "list": [
+                    {
+                        "text": "Avanza a tu propio ritmo"
+                    },
+                    {
+                        "text": "Soporte técnico 24/7 para dudas"
+                    }
+                ],
+                "image": "/images/home/about/information.png"
+            },
+            {
+                "name": "Rutas",
+                "title": "Cursos 100% aplicables a tu entrenamiento",
+                "description": "Aprende, entiende y valida tus conocimientos a través de nuestro aplicativo.",
+                "list": [
+                    {
+                        "text": "Avanza a tu propio ritmo"
+                    },
+                    {
+                        "text": "Soporte técnico 24/7 para dudas"
+                    }
+                ],
+                "image": "/images/home/about/information.png"
+            },
+            {
+                "name": "App",
+                "title": "Cursos 100% aplicables a tu entrenamiento",
+                "description": "Aprende, entiende y valida tus conocimientos a través de nuestro aplicativo.",
+                "list": [
+                    {
+                        "text": "Avanza a tu propio ritmo"
+                    },
+                    {
+                        "text": "Soporte técnico 24/7 para dudas"
+                    }
+                ],
+                "image": "/images/home/about/information.png"
+            },
+            {
+                "name": "Certificaciones",
+                "title": "Cursos 100% aplicables a tu entrenamiento",
+                "description": "Aprende, entiende y valida tus conocimientos a través de nuestro aplicativo.",
+                "list": [
+                    {
+                        "text": "Avanza a tu propio ritmo"
+                    },
+                    {
+                        "text": "Soporte técnico 24/7 para dudas"
+                    }
+                ],
+                "image": "/images/home/about/information.png"
+            }
+        ]
+    },
+    "stadistics": {
+        "title": "¿Por qué FitJaguar?",
+        "subtitle": "Transformamos la industria del fitness conectando a entrenadores, atletas y principiantes para ayudarlos a comenzar desde cero o salir del estancamiento.",
+        "items": [
+            {
+                "number": 1000,
+                "description": "Horas de contenido"
+            },
+            {
+                "number": 140,
+                "description": "Gimnasios que trabajan con nosotros"
+            },
+            {
+                "number": 10,
+                "description": "Países de cobertura con asociados"
+            },
+            {
+                "number": 13000,
+                "description": "Egresados"
+            }
+        ]
+    },
+    "benefits": {
+        "title": "Con FitJaguar supera las barreras y límites del aprendizaje",
+        "subtitle": "Accede a miles de posibilidades para mejorar tus entrenamientos",
+        "items": [
+            {
+                "title": "Programación a Distancia",
+                "description": "Podrás ver tu entrenamiento semanal y entrenar cuándo y donde quieras.",
+                "image": "/images/svg/benefit_programation.svg"
+            },
+            {
+                "title": "Educación continua",
+                "description": "Obtendrás material y casos de entrenamientos reales para marcar la diferencia.",
+                "image": "/images/svg/benefit_education.svg"
+            },
+            {
+                "title": "Mentoría con expertos",
+                "description": "Encuentra al experto que necesitas para lograr tus objetivos.",
+                "image": "/images/svg/benefit_mentoring.svg"
+            },
+            {
+                "title": "Marketplace",
+                "description": "Vende tus entrenamientos o cursos en nuestra plataforma.",
+                "image": "/images/svg/benefit_marketplace.svg"
+            },
+            {
+                "title": "Contrata a Coaches",
+                "description": "¿Estás listo para crecer? Encuentra aquí a tu equipo ideal.",
+                "image": "/images/svg/benefit_coaches.svg"
+            }
+        ]
+    },
+    "experience": {
+        "title": "Vive la experiencia Fitjaguar",
+        "subtitle": "Con FitJaguar accede a miles de posibilidades para mejorar tu ruta de aprendizaje",
+        "video": "123698547"
+    },
+    "testimonials": {
+        "title": "Lo que opinan nuestros estudiantes",
+        "subtitle": "Nuestra experiencia se regleja en nuestros estudiantes y sus historias de exito",
+        "items": [
+            {
+                "video": "123698547",
+                "name": "Jen Garcia",
+                "role": "Estudiante"
+            },
+            {
+                "video": "123698547",
+                "name": "Marcos Segura",
+                "role": "Estudiante"
+            },
+            {
+                "video": "123698547",
+                "name": "Bethanny Silva",
+                "role": "Estudiante"
+            },
+            {
+                "video": "123698547",
+                "name": "Jessy Armas",
+                "role": "Estudiante"
+            }
+        ]
+    }
+}

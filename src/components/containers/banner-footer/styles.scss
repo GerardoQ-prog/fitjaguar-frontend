@@ -1,0 +1,26 @@
+@import '../../../styles/colors.scss';
+
+.banner-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    width: 100%;
+    padding: 20px;
+    margin: 2% auto;
+
+    &__title {
+        max-width: 420px;
+        text-align: start;
+    }
+
+    &__subtitle {
+        text-align: start;
+        margin: 50px 0px;
+        max-width: 420px;
+    }
+
+    &__button {
+        width: 200px;
+    }
+}

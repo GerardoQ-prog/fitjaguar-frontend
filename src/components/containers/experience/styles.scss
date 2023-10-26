@@ -1,0 +1,32 @@
+@import '../../../styles/colors.scss';
+
+.experience {
+    background: $black2;
+
+    .experience-content {
+        max-width: 1000px;
+        padding: 20px;
+        margin: 0px auto;
+
+        &__title {
+            text-align: center;
+            margin: 30px;
+        }
+
+        &__subtitle {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        &__actions {
+            display: flex;
+            justify-content: center;
+            margin: 40px 0px;
+
+            button {
+                width: 200px;
+            }
+        }
+    }
+
+}

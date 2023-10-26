@@ -1,0 +1,49 @@
+@import '../../../styles/colors.scss';
+
+.menu {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    gap: 25px;
+
+    &__item {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 13px;
+        text-decoration: none;
+        color: $gray;
+
+        p>span {
+            color: $black;
+            background: $yellow;
+            margin-left: 5px;
+            padding: 3px 5px;
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        &--active {
+            color: $yellow;
+        }
+    }
+
+    &__search {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        color: $gray;
+        background: $black2;
+        width: 100%;
+        max-width: 240px;
+        padding: 10px;
+        border-radius: 8px;
+        margin-left: 20px;
+        font-size: 14px;
+
+        p {
+            margin: 0px 10px;
+        }
+    }
+
+}

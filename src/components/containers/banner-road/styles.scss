@@ -1,0 +1,44 @@
+@import '../../../styles/colors.scss';
+
+.banner-road {
+    background: $yellow;
+
+    .road {
+        max-width: 1000px;
+        margin: 20px auto;
+        padding: 20px;
+
+        &__information {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        &__title {
+            color: $black;
+        }
+
+        &__subtitle {
+            color: $black;
+            font-weight: 700;
+            margin: 10px 0px;
+        }
+
+        span {
+            color: $black;
+            font-size: 14px;
+        }
+
+        &__button {
+            width: 180px;
+        }
+
+        &__list-courses {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+    }
+
+}

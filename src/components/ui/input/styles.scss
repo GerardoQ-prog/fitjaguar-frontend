@@ -1,0 +1,17 @@
+@import '../../../styles/colors.scss';
+
+.input {
+    background: $white;
+    width: 100%;
+    padding: 15px;
+    border-radius: 7px;
+
+    input {
+        border: none;
+        outline: none;
+        background: transparent;
+        color: $black;
+        font-weight: 700;
+        font-size: 14px;
+    }
+}

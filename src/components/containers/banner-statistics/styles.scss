@@ -1,0 +1,63 @@
+@import '../../../styles/colors.scss';
+
+.banner-statistics {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 1000px;
+    width: 100%;
+    padding: 20px;
+    color: $black;
+    margin: 0 auto;
+
+    &__title {
+        color: $black !important;
+        text-align: center;
+        margin: 30px 0px;
+    }
+
+    &__subtitle {
+        max-width: 650px;
+        color: $black !important;
+        text-align: center;
+        margin: 30px auto 50px auto;
+    }
+
+    .statistics {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        &__number {
+            text-align: center;
+            font-weight: 800;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        &__description {
+            text-align: center;
+            font-weight: 700;
+            max-width: 200px;
+            font-size: 18px;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: center;
+        margin: 25px 0px;
+    }
+
+    &__button {
+        background: $black ;
+        color: $white !important;
+        margin: 40px auto;
+        width: 200px !important;
+        padding: 15px 20px;
+        font-size: 18px;
+        text-decoration: none !important;
+    }
+}

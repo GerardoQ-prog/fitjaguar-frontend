@@ -1,0 +1,64 @@
+@import '../../../styles/colors.scss';
+
+.card-tool-video {
+    background: $black2;
+    border-radius: 12px;
+    max-width: 200px;
+    width: 100%;
+    padding: 15px;
+
+    p {
+        font-size: 16px;
+        font-weight: 600;
+        min-height: 40px;
+    }
+
+    span {
+        font-size: 12px;
+        font-weight: 400;
+        color: $yellow;
+    }
+
+    &__free {
+        display: block;
+        background: $yellow;
+        width: 100%;
+        text-align: center;
+        text-decoration: none;
+        color: $black;
+        font-size: 14px;
+        font-weight: 700;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+
+    .video-actions {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin-top: 10px;
+
+        &__cart {
+            outline: none;
+            border: none;
+            background: $gray;
+            display: flex;
+            width: 45px;
+            padding: 0px 3.97px;
+            justify-content: center;
+            align-items: center;
+            gap: 3.97px;
+            border-radius: 5px;
+            height: auto;
+            cursor: pointer;
+        }
+
+        &__buy {
+            font-size: 14px;
+            padding: 10px;
+            width: 100%;
+        }
+    }
+
+}
