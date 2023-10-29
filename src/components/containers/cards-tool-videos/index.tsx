@@ -10,34 +10,31 @@ export type ToolVideo = {
   id: number;
   title: string;
   duration: string;
-  free: boolean;
   slug: string;
+  description: string;
+  road: string;
+  coach?: any;
+  video: string;
+  miniature: string;
 };
 
 interface ICardToolVideoProps {
   videos: ToolVideo[];
-  isViewAll?: boolean;
 }
 
-const CardsToolsVideos: FC<ICardToolVideoProps> = ({ videos, isViewAll }) => {
+const CardsToolsVideos: FC<ICardToolVideoProps> = ({ videos }) => {
   return (
     <div className="cards-tool-videos">
       <div className="videos-header">
         <Title component="h2">Videos</Title>
-        {isViewAll ? (
-          <Link href="/herramientas/videos" className="videos-header__view">
-            Ver todo
-          </Link>
-        ) : (
-          <div className="videos-header__options">
-            <div>
-              <OrderIcon />
-            </div>
-            <div>
-              <FilterIcon />
-            </div>
+        <div className="videos-header__options">
+          <div>
+            <OrderIcon />
           </div>
-        )}
+          <div>
+            <FilterIcon />
+          </div>
+        </div>
       </div>
       <div className="cards-tool-videos__list">
         {videos.map((item) => (

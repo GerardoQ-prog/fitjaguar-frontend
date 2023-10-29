@@ -1,0 +1,32 @@
+@import '../../../styles/colors.scss';
+
+.detail-course {
+    .course-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .course-title {
+            &__blocks {
+                color: $yellow;
+                font-size: 14px;
+                margin: 10px 0px;
+            }
+
+            .course-tags {
+                display: flex;
+                gap: 20px;
+                margin-top: 20px;
+
+                div {
+                    background: $black3;
+                    color: $yellow;
+                    padding: 5px;
+                    border-radius: 8px;
+                }
+            }
+        }
+
+
+    }
+}

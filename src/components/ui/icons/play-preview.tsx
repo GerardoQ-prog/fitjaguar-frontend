@@ -4,13 +4,13 @@ const PlayPreviewIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="18"
-      height="18"
-      viewBox="0 0 13 13"
+      width="10"
+      height="10"
+      viewBox="0 0 6 7"
       fill="none"
     >
       <path
-        d="M4.97524 4.85654L7.56558 6.50806L4.97524 8.15959V4.85654ZM3.99219 3.06738V9.94874L9.39897 6.50806"
+        d="M0.974506 1.85654L3.56485 3.50806L0.974506 5.15959V1.85654ZM-0.00854492 0.0673828V6.94874L5.39823 3.50806"
         fill="#FEC600"
       />
     </svg>

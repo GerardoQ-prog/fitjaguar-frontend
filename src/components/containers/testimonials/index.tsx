@@ -1,41 +1,27 @@
-import React from "react";
+import React, { FC } from "react";
 import "./styles.scss";
-import CardTestimonial, {
-  ICardTestimonialProps,
-} from "@/components/elements/card-testimonial";
+import CardTestimonial from "@/components/elements/card-testimonial";
 import Link from "next/link";
 import Button from "@/components/ui/button";
 import Title from "@/components/ui/title";
 import Subtitle from "@/components/ui/subtitle";
 
-const Testimonials = () => {
-  const testimonials: ICardTestimonialProps[] = [
-    {
-      image: "/images/png/student1.png",
-      alt: "Jen Garcia",
-      name: "Jen Garcia",
-      role: "Estudiante",
-    },
-    {
-      image: "/images/png/student2.png",
-      alt: "Marcos Segura",
-      name: "Marcos Segura",
-      role: "Estudiante",
-    },
-    {
-      image: "/images/png/student3.png",
-      alt: "Bethanny Silva",
-      name: "Bethanny Silva",
-      role: "Estudiante",
-    },
-    {
-      image: "/images/png/student4.png",
-      alt: "Jessy Armas",
-      name: "Jessy Armas",
-      role: "Estudiante",
-    },
-  ];
+export type ItemTestimonial = {
+  video: string;
+  name: string;
+  role: string;
+};
 
+type TestimonialsContent = {
+  title: string;
+  subtitle: string;
+  items: ItemTestimonial[];
+};
+interface ITestimonialsProps {
+  testimonials: TestimonialsContent;
+}
+
+const Testimonials: FC<ITestimonialsProps> = ({ testimonials }) => {
   return (
     <div className="testimonials">
       <Title className="testimonials__title">
@@ -46,7 +32,7 @@ const Testimonials = () => {
         de exito
       </Subtitle>
       <div className="testimonials__cards">
-        {testimonials.map((item, index) => (
+        {testimonials.items.map((item, index) => (
           <CardTestimonial key={index} {...item} />
         ))}
       </div>

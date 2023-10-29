@@ -1,42 +1,79 @@
 "use client";
 
 import Link from "next/link";
-import React from "react";
+import { useState, FC } from "react";
 import "./styles.scss";
 import Image from "next/image";
 import Spotlight from "../spotlight";
 import { usePathname } from "next/navigation";
 import { useOpen } from "@/hooks/use-open";
+import OptionsMenu from "../options-menu";
 
-const Menu: React.FC = () => {
-  const pathname = usePathname();
+const Menu: FC = () => {
   const { handleClose, handleOpen, isOpen } = useOpen();
+  const {
+    handleClose: handleCloseOptionsMenu,
+    handleOpen: hanldleOpenOptionsMenu,
+    isOpen: isOpenOptionsMenu,
+  } = useOpen();
+  const [optionsMenu, setOptionsMenu] = useState({
+    name: "Rutas",
+    options: [] as any[],
+    viewAll: true,
+  });
+
+  const handleOptionsMenu = (option: string) => {
+    if (option === "Rutas") {
+      setOptionsMenu({
+        name: option,
+        options: [
+          {
+            name: "Crossfit",
+            path: "/cursos/crossfit",
+          },
+          {
+            name: "Weightlifting",
+            path: "/cursos/weightlifting",
+          },
+        ],
+        viewAll: true,
+      });
+    }
+
+    if (option === "Herramientas") {
+      setOptionsMenu({
+        name: option,
+        options: [
+          {
+            name: "Videos",
+            path: "/videos",
+          },
+          {
+            name: "Documentos",
+            path: "/documentos",
+          },
+        ],
+        viewAll: false,
+      });
+    }
+
+    hanldleOpenOptionsMenu();
+  };
 
   const menuLinks = [
     {
       name: "Inicio",
       href: "/",
-      active: pathname === "/",
     },
     {
       name: "Cursos",
       href: "/cursos",
-      active: pathname === "/cursos",
     },
     {
       name: "Rutas",
-      href: "/rutas",
-      active: pathname === "/rutas",
-    },
-    {
-      name: "Workshops",
-      href: "/workshops",
-      active: pathname === "/workshops",
     },
     {
       name: "Herramientas",
-      href: "/herramientas",
-      active: pathname === "/herramientas",
       tag: "Gratis",
     },
   ];
@@ -44,18 +81,36 @@ const Menu: React.FC = () => {
   return (
     <div className="menu">
       {menuLinks.map((link) => (
-        <Link
-          href={link.href}
-          className={`menu__item ${link.active ? "menu__item--active" : ""}`}
-          key={link.name}
-        >
-          <p>
-            {link.name}
-            {link.tag && <span>{link.tag}</span>}
-          </p>
-        </Link>
+        <>
+          {link.href ? (
+            <Link
+              href={link.href}
+              className={`menu__item`}
+              key={link.name}
+              onClick={handleCloseOptionsMenu}
+            >
+              <p>{link.name}</p>
+            </Link>
+          ) : (
+            <div
+              className={`menu__item`}
+              onClick={() => handleOptionsMenu(link.name)}
+            >
+              <p>
+                {link.name}
+                {link.tag && <span>{link.tag}</span>}
+              </p>
+            </div>
+          )}
+        </>
       ))}
-      <div className="menu__search" onClick={handleOpen}>
+      <div
+        className="menu__search"
+        onClick={() => {
+          handleCloseOptionsMenu();
+          handleOpen();
+        }}
+      >
         <Image
           src="/images/svg/icon_search.svg"
           alt="icon_search"
@@ -64,6 +119,11 @@ const Menu: React.FC = () => {
         />
         <p>Buscar</p>
       </div>
+      <OptionsMenu
+        isOpen={isOpenOptionsMenu}
+        handleClose={handleCloseOptionsMenu}
+        optionsMenu={optionsMenu}
+      />
       <Spotlight isOpen={isOpen} handleClose={handleClose} />
     </div>
   );

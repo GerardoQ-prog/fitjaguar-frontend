@@ -1,18 +1,17 @@
-import CardsToolsVideos from "@/components/containers/cards-tool-videos";
+import CardsToolDocuments from "@/components/containers/cards-tool-documents";
 import WrapperContent from "@/components/containers/wrapper-content";
 import Separator from "@/components/ui/separator";
-import { videos } from "@/utils/constants";
 import React from "react";
-
-const ToolsVideosPage = () => {
+import documents from "@/utils/data/documents.json";
+const ToolsDocumentsPage = () => {
   return (
     <main>
       <Separator height="100px" />
       <WrapperContent>
-        <CardsToolsVideos videos={videos} isViewAll={false} />
+        <CardsToolDocuments documents={documents.items} />
       </WrapperContent>
     </main>
   );
 };
 
-export default ToolsVideosPage;
+export default ToolsDocumentsPage;

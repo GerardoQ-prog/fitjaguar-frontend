@@ -6,31 +6,55 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     display: flex;
     justify-content: center;
-    padding-top: 120px;
     z-index: 2;
-    transform: translate(1);
+    animation-name: shadow;
+    animation-duration: 0.5s;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    @keyframes shadow {
+        from {
+            background-color: transparent;
+        }
+
+        to {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    }
 
     &__search {
-        background: $black;
+        background: $gray2;
         width: 100%;
         max-width: 600px;
         max-height: 50px;
         display: flex;
         align-items: center;
-        padding: 10px;
-        border-radius: 5px;
+        padding: 10px 20px;
+        border-radius: 12px;
+        margin-top: 120px;
+        animation-name: in;
+        animation-duration: 0.5s;
 
         input {
             background: transparent;
             border: none;
             outline: none;
-            color: $white;
+            color: $gray;
             font-size: 18px;
             width: 100%;
+            margin-left: 10px;
+        }
+
+        @keyframes in {
+            from {
+                margin-top: 0px;
+            }
+
+            to {
+                margin-top: 120px;
+            }
         }
 
     }

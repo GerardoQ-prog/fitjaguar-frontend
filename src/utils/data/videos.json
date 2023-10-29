@@ -1,0 +1,99 @@
+{
+    "name": "Videos",
+    "items": [
+        {
+            "id": 1,
+            "title": "Introducción al Crossfit",
+            "duration": "5:30 min",
+            "slug": "introduccion-al-crossfit",
+            "road": "croosfit",
+            "description": "<p>Gaaaaaaa</p>",
+            "coach": {
+                "name": "Sandra Arenas",
+                "slug": "sandra-arenas"
+            },
+            "video": "876706887",
+            "miniature": "/images/jpg/image_fit.jpg",
+            "likes": "100",
+            "comments": [
+                {
+                    "id": 1,
+                    "user": "Usuario",
+                    "comment": "Comentario de usuario 1"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Introducción al Yoga",
+            "duration": "5:30 min",
+            "slug": "introduccion-al-yoga",
+            "road": "croosfit",
+            "description": "<p>Gaaaaaaa</p>",
+            "video": "876706887",
+            "miniature": "/images/jpg/image_fit.jpg",
+            "likes": "100",
+            "comments": [
+                {
+                    "id": 1,
+                    "user": "Usuario",
+                    "comment": "Comentario de usuario 1"
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "title": "Introducción al Crossfit",
+            "duration": "5:30 min",
+            "slug": "introduccion-al-crossfit",
+            "road": "croosfit",
+            "description": "<p>Gaaaaaaa</p>",
+            "video": "876706887",
+            "miniature": "/images/jpg/image_fit.jpg",
+            "likes": "100",
+            "comments": [
+                {
+                    "id": 1,
+                    "user": "Usuario",
+                    "comment": "Comentario de usuario 1"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Introducción al Yoga",
+            "duration": "5:30 min",
+            "slug": "introduccion-al-yoga",
+            "road": "croosfit",
+            "description": "<p>Gaaaaaaa</p>",
+            "video": "876706887",
+            "miniature": "/images/jpg/image_fit.jpg",
+            "likes": "100",
+            "comments": [
+                {
+                    "id": 1,
+                    "user": "Usuario",
+                    "comment": "Comentario de usuario 1"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Introducción al Yoga",
+            "duration": "5:30 min",
+            "slug": "introduccion-al-crossfit",
+            "road": "croosfit",
+            "description": "<p>Gaaaaaaa</p>",
+            "video": "876706887",
+            "miniature": "/images/jpg/image_fit.jpg",
+            "likes": "100",
+            "comments": [
+                {
+                    "id": 1,
+                    "user": "Usuario",
+                    "comment": "Comentario de usuario 1"
+                }
+            ]
+        }
+    ]
+}

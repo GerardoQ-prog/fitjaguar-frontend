@@ -9,7 +9,7 @@ interface IWrapperContentProps {
 
 const WrapperContent: FC<IWrapperContentProps> = ({
   children,
-  className,
+  className = "",
   component: Component = "section",
 }) => {
   return (

@@ -24,10 +24,10 @@ const BannerRoad = () => {
           </Button>
         </div>
         <div className="road__list-courses">
+          {/* <CardCourse />
           <CardCourse />
           <CardCourse />
-          <CardCourse />
-          <CardCourse />
+          <CardCourse /> */}
         </div>
       </div>
     </div>

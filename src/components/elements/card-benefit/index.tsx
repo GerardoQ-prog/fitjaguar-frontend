@@ -1,24 +1,13 @@
 import Image from "next/image";
 import React from "react";
 import "./styles.scss";
+import { ItemBenefit } from "@/components/containers/benefits";
 
-export interface ICardBenefitProps {
-  title: string;
-  description: string;
-  image: string;
-  alt: string;
-}
-
-const CardBenefit: React.FC<ICardBenefitProps> = ({
-  title,
-  description,
-  image,
-  alt,
-}) => {
+const CardBenefit: React.FC<ItemBenefit> = ({ title, description, image }) => {
   return (
     <div className="card-benefit">
       <div className="card-benefit__image">
-        <Image alt={alt} src={image} width={60} height={60} />
+        <Image alt={title} src={image} width={60} height={60} />
       </div>
       <div className="card-content">
         <p className="card-content__title">{title}</p>

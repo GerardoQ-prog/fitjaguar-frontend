@@ -3,6 +3,7 @@
 import React, { memo } from "react";
 import "./styles.scss";
 import Image from "next/image";
+import SearchIcon from "../icons/search";
 
 const Spotlight = memo(function Search({
   isOpen,
@@ -14,12 +15,7 @@ const Spotlight = memo(function Search({
   return isOpen ? (
     <div className="spotlight">
       <div className="spotlight__search">
-        <Image
-          src="/images/svg/icon_search.svg"
-          alt="icon_search"
-          width={40}
-          height={40}
-        />
+        <SearchIcon />
         <input />
         <Image
           src="/images/svg/icon_close.svg"

@@ -1,40 +1,47 @@
 import Button from "@/components/ui/button";
 import CartIcon from "@/components/ui/icons/cart";
 import PlayPreviewIcon from "@/components/ui/icons/play-preview";
-import Image from "next/image";
-import React from "react";
+import { FC } from "react";
 import "./styles.scss";
+import { ItemCourse } from "@/components/containers/cards-courses";
+import Link from "next/link";
+import Image from "next/image";
 
-const CardCourse = () => {
+const CardCourse: FC<ItemCourse> = ({ ...item }) => {
   return (
     <div className="card-course">
       <div className="course-banner">
-        <div className="course-tags">
-          <div className="course-tags__tag course-tags__tag--yellow">
-            Crossfit
-          </div>
-          <div className="course-tags__tag course-tags__tag--black">Ruta</div>
-        </div>
-        {/* <Image/> */}
+        <Image
+          src="/images/jpg/image_fit.jpg"
+          alt={item.title}
+          width={200}
+          height={120}
+        />
         <div className="course-banner__preview">
-          <p>Presentación</p>
-          <PlayPreviewIcon />
+          <div className="course-tags">
+            <div className="course-tags__tag course-tags__tag--yellow">
+              {item.road}
+            </div>
+            <div className="course-tags__tag course-tags__tag--black">Ruta</div>
+          </div>
+          <Link href={`/cursos/${item.type}/${item.slug}`}>
+            <p>Presentación</p>
+            <PlayPreviewIcon />
+          </Link>
         </div>
       </div>
       <div className="course-information">
         <div>
-          <p className="course-information__title">
-            Título completo para el nuevo curso
-          </p>
-          <p className="course-information__subtitle">Profesor del curso</p>
+          <p className="course-information__title">{item.title}</p>
+          <p className="course-information__subtitle">{item.teacher}</p>
         </div>
         <div className="information-price">
           <span>Precio</span>
-          <p className="information-price__price">S/ 1200</p>
-          <p className="information-price__old-price">S/ 2000</p>
+          <p className="information-price__price">S/ {item.priceCurrent}</p>
+          <p className="information-price__old-price">S/ {item.price}</p>
         </div>
       </div>
-      <p className="card-course__label">Pertenece a Ruta de Crossfit básico</p>
+      <p className="card-course__label">Pertenece a Ruta de {item.road}</p>
       <div className="course-actions">
         <button className="course-actions__cart">
           <CartIcon />

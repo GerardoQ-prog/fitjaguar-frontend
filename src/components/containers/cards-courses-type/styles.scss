@@ -1,6 +1,6 @@
 @import '../../../styles/colors.scss';
 
-.cards-courses {
+.cards-courses-type {
     margin: 40px 0px;
 
     &__head {
@@ -12,6 +12,17 @@
             cursor: pointer;
             color: $yellow;
             text-decoration: underline;
+        }
+
+
+    }
+
+    &__options {
+        display: flex;
+        gap: 10px;
+
+        div {
+            cursor: pointer;
         }
     }
 

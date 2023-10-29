@@ -1,0 +1,89 @@
+@import '../../../styles/colors.scss';
+
+.options-menu {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    z-index: 2;
+    animation-name: shadow;
+    animation-duration: 0.5s;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    @keyframes shadow {
+        from {
+            background-color: transparent;
+
+        }
+
+        to {
+            background-color: rgba(0, 0, 0, 0.5);
+
+        }
+    }
+
+    .menu-content {
+        background: $gray2;
+        width: 100%;
+        max-width: 600px;
+        max-height: 300px;
+        display: flex;
+        align-items: flex-start;
+        padding: 30px 20px;
+        border-radius: 12px;
+        animation-name: content;
+        animation-duration: 0.5s;
+        transform: scaleY(1);
+
+        @keyframes content {
+            from {
+                transform: scaleY(0);
+            }
+
+            to {
+                transform: scaleY(1);
+            }
+        }
+
+        &__title {
+            font-size: 20px;
+            border-left: 5px solid $yellow;
+            padding-left: 10px;
+        }
+
+        &__close {
+            margin-top: -20px;
+            margin-right: -10px;
+            cursor: pointer;
+        }
+
+        .content-list {
+            margin-left: 30px;
+            display: flex;
+            flex-direction: column;
+            border-left: 1px solid $gray;
+            height: 100%;
+            padding-left: 15px;
+            flex-grow: 1;
+
+            a {
+                margin-bottom: 10px;
+            }
+
+            a:hover {
+                color: $yellow;
+            }
+
+            &__all {
+                color: $yellow;
+                font-weight: 700;
+            }
+
+        }
+
+    }
+}

@@ -1,30 +1,32 @@
 import { ToolVideo } from "@/components/containers/cards-tool-videos";
-import Button from "@/components/ui/button";
 import { FC } from "react";
 import "./styles.scss";
 import Link from "next/link";
-import CartIcon from "@/components/ui/icons/cart";
+import Image from "next/image";
+import PlayIcon from "@/components/ui/icons/play";
 
 const CardToolVideo: FC<ToolVideo> = ({ ...item }) => {
   return (
     <div className="card-tool-video">
       <p>{item.title}</p>
-      <span>Duración: {item.duration}</span>
-      {item.free ? (
-        <Link
-          className="card-tool-video__free"
-          href={`/herramientas/videos/${item.slug}`}
-        >
-          Recurso gratuito
-        </Link>
-      ) : (
-        <div className="video-actions">
-          <div className="video-actions__cart">
-            <CartIcon />
+      <Link href={`/videos/${item.slug}`}>
+        <div className="video-preview">
+          <Image
+            src={item.miniature}
+            width={170}
+            height={100}
+            alt={item.title}
+          />
+          <div className="video-preview__play">
+            <PlayIcon width="35" />
           </div>
-          <Button className="video-actions__buy">Comprar</Button>
         </div>
-      )}
+      </Link>
+
+      <span>Duración: {item.duration}</span>
+      <Link className="card-tool-video__free" href={`/videos/${item.slug}`}>
+        Recurso gratuito
+      </Link>
     </div>
   );
 };
