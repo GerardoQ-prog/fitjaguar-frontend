@@ -1,0 +1,128 @@
+@import "../../../styles/colors.scss";
+
+.shop-car {
+    .car-detail {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        width: 100%;
+        gap: 50px;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &__wrapper {
+            width: 100%;
+        }
+
+        &__title {
+            color: $yellow;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .price-car-detail {
+            display: flex;
+            justify-content: space-between;
+            margin: 15px 0px;
+            font-size: 16px;
+            font-weight: 700;
+
+            &__label {
+                color: $yellow;
+            }
+
+            &__buy {
+
+                padding-top: 20px;
+                border-top: 1px solid $yellow;
+
+                button {
+                    width: 100%;
+                }
+            }
+        }
+
+        .cards-car-shop {
+            width: 100%;
+            border-top: 1px solid $yellow;
+            border-bottom: 1px solid $yellow;
+
+            &__label {
+                margin: 20px 0px;
+            }
+        }
+    }
+
+    .discount {
+        border-bottom: 1px solid $yellow;
+        padding-bottom: 30px;
+
+        &__title {
+            color: $yellow;
+            font-weight: 700;
+            margin: 20px 0px;
+        }
+
+        .discount-information {
+            display: flex;
+            justify-content: space-between;
+
+            @media (max-width: 768px) {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+
+
+            p {
+                width: 100%;
+                font-size: 14px;
+            }
+
+            &__action {
+                display: flex;
+                gap: 30px;
+                width: 100%;
+            }
+        }
+    }
+
+
+    .reference {
+        border-bottom: 1px solid $yellow;
+        padding-bottom: 30px;
+
+        &__title {
+            color: $yellow;
+            font-weight: 700;
+            margin: 20px 0px;
+        }
+
+        .reference-information {
+            display: flex;
+            justify-content: space-between;
+
+
+            @media (max-width: 768px) {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+
+
+            p {
+                font-size: 14px;
+                width: 100%;
+            }
+
+            &__action {
+                display: flex;
+                gap: 30px;
+                width: 100%;
+            }
+        }
+    }
+}

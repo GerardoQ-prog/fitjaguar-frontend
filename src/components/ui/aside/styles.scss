@@ -1,0 +1,23 @@
+@import '../../../styles/colors.scss';
+
+.aside {
+    display: flex;
+
+    .aside-menu {
+        max-width: 350px;
+        padding: 20px 60px;
+
+        &__item {
+            display: flex;
+            gap: 10px;
+            margin: 15px 0px;
+            cursor: pointer;
+
+            &--active {
+                color: $yellow;
+            }
+        }
+    }
+
+
+}

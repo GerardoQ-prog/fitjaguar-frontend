@@ -1,35 +1,31 @@
 @import '../../../styles/colors.scss';
 
 .cards-tool-videos {
-    margin-top: 30px;
+    margin: 30px auto;
+    background: $black;
+    display: flex;
+    gap: 20px;
 
-    .videos-header {
+    &__container {
+        padding: 10px;
+        width: 100%;
+    }
+
+    &__filters {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 20px;
-
-        &__view {
-            cursor: pointer;
-            color: $yellow;
-            text-decoration: underline;
-        }
-
-        &__options {
-            display: flex;
-            gap: 20px;
-
-            div {
-                cursor: pointer;
-            }
-        }
+        gap: 20px;
+        justify-content: flex-end;
+        margin-bottom: 30px;
     }
 
     &__list {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         gap: 30px;
         flex-wrap: wrap;
-    }
 
+        @media (max-width: 1024px) {
+            justify-content: space-evenly;
+        }
+    }
 }

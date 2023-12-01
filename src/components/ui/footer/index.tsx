@@ -2,11 +2,7 @@ import BannerFooter from "@/components/containers/banner-footer";
 import React from "react";
 
 const Footer = () => {
-  return (
-    <>
-      <BannerFooter />
-    </>
-  );
+  return <BannerFooter />;
 };
 
 export default Footer;

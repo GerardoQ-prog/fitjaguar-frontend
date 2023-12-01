@@ -3,6 +3,19 @@
 
     &__image {
         width: 100%;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    &__image-mobile {
+        display: none;
+
+        @media (max-width: 768px) {
+            display: block;
+            width: 100%;
+        }
     }
 
 }

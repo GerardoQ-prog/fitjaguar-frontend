@@ -22,12 +22,15 @@ const About = () => {
           </Subtitle>
           <Button>Accede hoy</Button>
         </div>
-        <Image
-          src="/images/png/about.png"
-          alt="About Image"
-          width={450}
-          height={280}
-        />
+        <div>
+          <Image
+            src="/images/png/about.png"
+            alt="About Image"
+            width={450}
+            height={280}
+            className="about-information__image"
+          />
+        </div>
       </div>
       <div className="about-slider">
         <Title className="about-slider__title">

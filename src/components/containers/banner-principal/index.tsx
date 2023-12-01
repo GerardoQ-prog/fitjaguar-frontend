@@ -12,6 +12,7 @@ const BannerPrincipal = () => {
       <Separator height="120px" />
       <BannerBackground
         image="/images/png/background-home.png"
+        imageMobile="/images/png/background-home-mobile.png"
         className="banner-principal"
         alt="Banner Principal"
       >

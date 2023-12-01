@@ -1,15 +1,10 @@
-{
-    "name": "Roads",
-    "roads": [
-        {
-            "id": "1",
-            "name": "Crossfit",
-            "slug": "crossfit"
-        },
-        {
-            "id": "2",
-            "name": "Weightlifting",
-            "slug": "weightlifting"
-        }
-    ]
-}
+[
+    {
+        "id": 1,
+        "name": "Crossfit"
+    },
+    {
+        "id": 2,
+        "name": "Weightlifting"
+    }
+]

@@ -1,0 +1,20 @@
+@import '../../../styles/colors.scss';
+
+.back-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 30px;
+
+    button {
+        background: $black3;
+        border-radius: 6px;
+        width: 30px;
+        height: 30px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+
+}

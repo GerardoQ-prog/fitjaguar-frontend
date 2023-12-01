@@ -1,50 +1,91 @@
+"use client";
+
 import CardCourse from "@/components/elements/card-course";
-import { FC } from "react";
+import { FC, useState } from "react";
 import "./styles.scss";
-import Title from "@/components/ui/title";
-import Link from "next/link";
+import TabsVertical from "@/components/ui/tabs-vertical";
+import Select from "@/components/ui/select";
 
 export type ItemCourse = {
-  id: string;
+  id: string | number;
   title: string;
-  teacher: string;
   duration: string;
-  road: string;
-  type: string;
-  priceCurrent: string;
-  price: string;
+  road: any;
+  priceCurrent: number;
+  price: number;
   description: string;
   miniature: string;
   blocks: any[];
+  coach: any;
   students: string;
-  comments: string;
+  likes: string;
+  comments: any[];
   level: string;
   slug: string;
 };
 
-type CoursesContent = {
-  title: string;
-  slug: string;
-  items: ItemCourse[];
-};
-
 interface ICardsCoursesProps {
-  courses: CoursesContent;
+  courses: ItemCourse[];
+  roads: any[];
 }
 
-const CardsCourses: FC<ICardsCoursesProps> = ({ courses }) => {
+const CardsCourses: FC<ICardsCoursesProps> = ({ courses, roads }) => {
+  const allRoads = [{ id: 0, name: "Todas las rutas" }, ...roads];
+  const orderOptions = [
+    {
+      id: 1,
+      name: "Más recientes",
+    },
+    {
+      id: 2,
+      name: "Más populares",
+    },
+    {
+      id: 3,
+      name: "Precio: Mayor a menor",
+    },
+    {
+      id: 4,
+      name: "Precio: Menor a mayor",
+    },
+  ];
+
+  const [tabSelected, setTabSelected] = useState(allRoads[0]);
+  const [orderOptionSelected, setOrderOptionSelected] = useState(
+    orderOptions[0]
+  );
+
+  const handleTabSelected = (tab: any) => {
+    setTabSelected(tab);
+  };
+
+  const handleChangeSelected = (option: any) => {
+    setOrderOptionSelected(option);
+  };
+
   return (
     <div className="cards-courses">
-      <div className="cards-courses__head">
-        <Title component="h2">{courses.title}</Title>
-        <Link href={`/cursos/${courses.slug}`}>
-          <span>Ver todos</span>
-        </Link>
-      </div>
-      <div className="cards-courses__list">
-        {courses.items.map((item, index) => (
-          <CardCourse key={index} {...item} />
-        ))}
+      <TabsVertical
+        tabs={allRoads}
+        tabSelected={tabSelected}
+        onTabSelected={handleTabSelected}
+      />
+      <div className="cards-courses__container">
+        <div className="cards-courses__filters">
+          <div>
+            <p>Ordenar por</p>
+            <Select
+              options={orderOptions}
+              selected={orderOptionSelected}
+              handleChangeSelect={handleChangeSelected}
+            />
+          </div>
+        </div>
+        <div className="cards-courses__list">
+          {courses.map((item, index) => (
+            <CardCourse key={index} {...item} />
+          ))}
+        </div>
       </div>
     </div>
   );

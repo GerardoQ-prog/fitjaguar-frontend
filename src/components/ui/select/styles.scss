@@ -1,0 +1,54 @@
+@import '../../../styles/colors.scss';
+
+.select {
+    position: relative;
+    width: 100%;
+    min-width: 300px;
+
+    &__container {
+        background: $white;
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        color: $gray2;
+        justify-content: space-between;
+        border-radius: 5px;
+        font-size: 14px;
+        align-items: center;
+        cursor: pointer;
+        font-weight: 700;
+        outline: none;
+        border: none;
+        min-height: 40px;
+
+    }
+
+    .select-options {
+        display: block;
+        max-height: 0px;
+        position: absolute;
+        overflow: hidden;
+        z-index: 9;
+        background: $white;
+        color: $gray2;
+        font-size: 14px;
+        min-width: 300px;
+        transition: all 0.5s ease-in-out;
+        box-shadow: 0 4px 18px rgba(92, 84, 122, .14);
+        top: 50px;
+        border-radius: 5px;
+
+        &--active {
+            max-height: 300px;
+        }
+
+        &__option {
+            margin: 10px 10px;
+            cursor: pointer;
+
+            &--active {
+                font-weight: 700;
+            }
+        }
+    }
+}

@@ -32,9 +32,9 @@ const Testimonials: FC<ITestimonialsProps> = ({ testimonials }) => {
         de exito
       </Subtitle>
       <div className="testimonials__cards">
-        {testimonials.items.map((item, index) => (
+        {/* {testimonials.items.map((item, index) => (
           <CardTestimonial key={index} {...item} />
-        ))}
+        ))} */}
       </div>
       <div className="testimonials__actions">
         <Link href="/cursos">

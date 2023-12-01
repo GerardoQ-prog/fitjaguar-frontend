@@ -10,12 +10,14 @@ import { useOpen } from "@/hooks/use-open";
 import OptionsMenu from "../options-menu";
 
 const Menu: FC = () => {
+  const pathname = usePathname();
   const { handleClose, handleOpen, isOpen } = useOpen();
   const {
     handleClose: handleCloseOptionsMenu,
     handleOpen: hanldleOpenOptionsMenu,
     isOpen: isOpenOptionsMenu,
   } = useOpen();
+
   const [optionsMenu, setOptionsMenu] = useState({
     name: "Rutas",
     options: [] as any[],
@@ -64,14 +66,16 @@ const Menu: FC = () => {
     {
       name: "Inicio",
       href: "/",
+      isActive: pathname === "/",
     },
     {
       name: "Cursos",
       href: "/cursos",
+      isActive: pathname.includes("/cursos"),
     },
-    {
-      name: "Rutas",
-    },
+    // {
+    //   name: "Rutas",
+    // },
     {
       name: "Herramientas",
       tag: "Gratis",
@@ -81,11 +85,13 @@ const Menu: FC = () => {
   return (
     <div className="menu">
       {menuLinks.map((link) => (
-        <>
+        <div key={link.name}>
           {link.href ? (
             <Link
               href={link.href}
-              className={`menu__item`}
+              className={`menu__item ${
+                link.isActive ? "menu__item--active" : ""
+              }`}
               key={link.name}
               onClick={handleCloseOptionsMenu}
             >
@@ -93,7 +99,9 @@ const Menu: FC = () => {
             </Link>
           ) : (
             <div
-              className={`menu__item`}
+              className={`menu__item ${
+                link.isActive ? "menu__item--active" : ""
+              }`}
               onClick={() => handleOptionsMenu(link.name)}
             >
               <p>
@@ -102,7 +110,7 @@ const Menu: FC = () => {
               </p>
             </div>
           )}
-        </>
+        </div>
       ))}
       <div
         className="menu__search"

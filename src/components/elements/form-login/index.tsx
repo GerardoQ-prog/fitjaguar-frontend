@@ -12,6 +12,7 @@ const FormLogin = () => {
       <Separator height="100px" />
       <BannerBackground
         image="/images/png/background-home.png"
+        imageMobile="/images/png/background-home.png"
         className="form-login"
         alt="Background LogIn"
       >

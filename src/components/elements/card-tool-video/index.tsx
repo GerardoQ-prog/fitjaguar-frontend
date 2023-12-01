@@ -8,9 +8,11 @@ import PlayIcon from "@/components/ui/icons/play";
 const CardToolVideo: FC<ToolVideo> = ({ ...item }) => {
   return (
     <div className="card-tool-video">
-      <p>{item.title}</p>
       <Link href={`/videos/${item.slug}`}>
-        <div className="video-preview">
+        <p>{item.title}</p>
+      </Link>
+      <div className="video-preview">
+        <Link href={`/videos/${item.slug}`}>
           <Image
             src={item.miniature}
             width={170}
@@ -20,9 +22,8 @@ const CardToolVideo: FC<ToolVideo> = ({ ...item }) => {
           <div className="video-preview__play">
             <PlayIcon width="35" />
           </div>
-        </div>
-      </Link>
-
+        </Link>
+      </div>
       <span>Duración: {item.duration}</span>
       <Link className="card-tool-video__free" href={`/videos/${item.slug}`}>
         Recurso gratuito

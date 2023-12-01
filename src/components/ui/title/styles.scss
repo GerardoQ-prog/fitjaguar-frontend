@@ -4,4 +4,12 @@
     color: $white;
     font-size: 32px;
     font-weight: 700;
+
+    @media (max-width: 1024px) {
+        font-size: 28px;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 20px;
+    }
 }

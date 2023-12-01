@@ -13,12 +13,18 @@
 
     &__subtitle {
         margin-bottom: 40px;
+
+        @media (max-width: 768px) {
+            margin-bottom: 0px;
+        }
     }
 
     &__cards {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         max-width: 1000px;
         margin: 70px auto;
+        flex-wrap: wrap;
+        gap: 15px;
     }
 }

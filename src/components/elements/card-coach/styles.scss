@@ -1,0 +1,29 @@
+@import '../../../styles/colors.scss';
+
+.card-coach {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0px 40px;
+
+    &__information {
+        padding: 20px;
+
+        span {
+            color: $yellow;
+            font-weight: 700;
+        }
+    }
+
+    &__text {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    &__button {
+        width: 100%;
+        font-size: 14px;
+        margin: 10px 0px;
+    }
+
+}

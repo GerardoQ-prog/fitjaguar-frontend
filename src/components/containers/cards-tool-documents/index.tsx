@@ -1,10 +1,10 @@
-import Title from "@/components/ui/title";
-import { FC } from "react";
+"use client";
+
+import { FC, useState } from "react";
 import "./styles.scss";
-import OrderIcon from "@/components/ui/icons/order";
-import FilterIcon from "@/components/ui/icons/filter";
-import Link from "next/link";
 import CardToolDocument from "@/components/elements/card-tool-document";
+import TabsVertical from "@/components/ui/tabs-vertical";
+import Select from "@/components/ui/select";
 
 export type ToolDocument = {
   id: number;
@@ -12,30 +12,71 @@ export type ToolDocument = {
   slug: string;
   description: string;
   coach?: any;
+  road: string;
+  image: string;
+  likes: string;
+  comments: any[];
+  pdf: string;
 };
 
 interface ICardsToolDocumentsProps {
   documents: ToolDocument[];
+  roads: any[];
 }
 
-const CardsToolDocuments: FC<ICardsToolDocumentsProps> = ({ documents }) => {
+const CardsToolDocuments: FC<ICardsToolDocumentsProps> = ({
+  documents,
+  roads,
+}) => {
+  const allRoads = [{ id: 0, name: "Todas las rutas" }, ...roads];
+  const [tabSelected, setTabSelected] = useState(allRoads[0]);
+
+  const handleTabSelected = (tab: any) => {
+    setTabSelected(tab);
+  };
+
+  const orderOptions = [
+    {
+      id: 1,
+      name: "Más recientes",
+    },
+    {
+      id: 2,
+      name: "Más populares",
+    },
+  ];
+
+  const [orderOptionSelected, setOrderOptionSelected] = useState(
+    orderOptions[0]
+  );
+
+  const handleChangeSelected = (option: any) => {
+    setOrderOptionSelected(option);
+  };
+
   return (
     <div className="cards-tool-documents">
-      <div className="documents-header">
-        <Title component="h2">Documentos</Title>
-        <div className="documents-header__options">
+      <TabsVertical
+        tabs={allRoads}
+        tabSelected={tabSelected}
+        onTabSelected={handleTabSelected}
+      />
+      <div className="cards-tool-documents__container">
+        <div className="cards-tool-documents__filters">
           <div>
-            <OrderIcon />
-          </div>
-          <div>
-            <FilterIcon />
+            <p>Ordenar por</p>
+            <Select
+              options={orderOptions}
+              selected={orderOptionSelected}
+              handleChangeSelect={handleChangeSelected}
+            />
           </div>
         </div>
-      </div>
-      <div className="cards-tool-documents__list">
-        {documents.map((item) => (
-          <CardToolDocument key={item.id} {...item} />
-        ))}
+        <div className="cards-tool-documents__list">
+          {documents.map((item) => (
+            <CardToolDocument key={item.id} {...item} />
+          ))}
+        </div>
       </div>
     </div>
   );

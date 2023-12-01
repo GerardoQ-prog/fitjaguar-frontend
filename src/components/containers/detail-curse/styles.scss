@@ -23,10 +23,72 @@
                     color: $yellow;
                     padding: 5px;
                     border-radius: 8px;
+                    font-size: 12px;
                 }
             }
         }
 
+        &__road {
+            background: $yellow;
+            border-radius: 10px;
+            color: $black;
+            padding: 5px 10px 10px 10px;
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 20px;
 
+            span {
+                font-size: 10px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+        }
+
+
+    }
+
+    .course-information {
+        &__title {
+            font-size: 22px;
+            font-weight: 700;
+            margin: 20px 0px;
+            color: $yellow
+        }
+
+        &__opinions {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+
+            div {
+                display: flex;
+                align-items: center;
+                font-weight: 700;
+                font-size: 18px;
+                gap: 5px;
+            }
+
+        }
+
+        .course-comment {
+            margin-bottom: 20px;
+
+            &__user {
+                display: flex;
+                margin: 10px 0px;
+
+                img {
+                    border-radius: 100px;
+                }
+
+                p {
+                    margin-left: 10px;
+                    font-size: 16px;
+                    font-weight: 700;
+                }
+            }
+        }
     }
 }

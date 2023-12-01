@@ -7,12 +7,18 @@
     padding: 15px;
     border-radius: 12px;
     box-shadow: 0px 1.9661px 1.9661px 0px rgba(0, 0, 0, 0.25);
-    margin-top: 20px;
+    // margin-top: 20px;
+
+    @media (max-width: 768px) {
+        max-width: 100%;
+    }
 
     .course-banner {
         position: relative;
         margin-bottom: 10px;
         width: 100%;
+
+
 
         .course-tags {
             display: flex;
@@ -95,6 +101,14 @@
             min-height: 75px;
             justify-content: space-evenly;
 
+            @media (max-width: 768px) {
+                flex-direction: row;
+                gap: 20px;
+                min-height: auto;
+                justify-content: flex-end;
+
+            }
+
             span {
                 color: $yellow;
                 font-size: 10px;
@@ -111,6 +125,10 @@
                 color: $gray;
                 font-size: 11px;
                 text-decoration: line-through;
+
+                @media (max-width: 768px) {
+                    display: none;
+                }
             }
         }
     }
@@ -119,6 +137,11 @@
         color: $yellow;
         font-size: 11px;
         margin-bottom: 10px;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+
     }
 
     .course-actions {
@@ -142,7 +165,6 @@
         }
 
         &__buy {
-            font-size: 14px;
             padding: 10px;
             width: 100%;
         }

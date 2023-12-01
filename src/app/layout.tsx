@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "../styles/index.scss";
 import Header from "@/components/ui/header";
 import "plyr-react/plyr.css";
+// import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Footer from "@/components/ui/footer";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });

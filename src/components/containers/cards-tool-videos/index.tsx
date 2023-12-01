@@ -1,10 +1,13 @@
+"use client";
+
 import CardToolVideo from "@/components/elements/card-tool-video";
 import Title from "@/components/ui/title";
-import { FC } from "react";
+import { FC, useState } from "react";
 import "./styles.scss";
 import OrderIcon from "@/components/ui/icons/order";
 import FilterIcon from "@/components/ui/icons/filter";
-import Link from "next/link";
+import Select from "@/components/ui/select";
+import TabsVertical from "@/components/ui/tabs-vertical";
 
 export type ToolVideo = {
   id: number;
@@ -16,30 +19,65 @@ export type ToolVideo = {
   coach?: any;
   video: string;
   miniature: string;
+  likes: string;
+  comments: any[];
 };
 
 interface ICardToolVideoProps {
   videos: ToolVideo[];
+  roads: any[];
 }
 
-const CardsToolsVideos: FC<ICardToolVideoProps> = ({ videos }) => {
+const CardsToolsVideos: FC<ICardToolVideoProps> = ({ videos, roads }) => {
+  const allRoads = [{ id: 0, name: "Todas las rutas" }, ...roads];
+  const [tabSelected, setTabSelected] = useState(allRoads[0]);
+
+  const handleTabSelected = (tab: any) => {
+    setTabSelected(tab);
+  };
+
+  const orderOptions = [
+    {
+      id: 1,
+      name: "Más recientes",
+    },
+    {
+      id: 2,
+      name: "Más populares",
+    },
+  ];
+
+  const [orderOptionSelected, setOrderOptionSelected] = useState(
+    orderOptions[0]
+  );
+
+  const handleChangeSelected = (option: any) => {
+    setOrderOptionSelected(option);
+  };
+
   return (
     <div className="cards-tool-videos">
-      <div className="videos-header">
-        <Title component="h2">Videos</Title>
-        <div className="videos-header__options">
+      <TabsVertical
+        tabs={allRoads}
+        tabSelected={tabSelected}
+        onTabSelected={handleTabSelected}
+      />
+      <div className="cards-tool-video__container">
+        <div className="cards-tool-videos__filters">
           <div>
-            <OrderIcon />
-          </div>
-          <div>
-            <FilterIcon />
+            <p>Ordenar por</p>
+            <Select
+              options={orderOptions}
+              selected={orderOptionSelected}
+              handleChangeSelect={handleChangeSelected}
+            />
           </div>
         </div>
-      </div>
-      <div className="cards-tool-videos__list">
-        {videos.map((item) => (
-          <CardToolVideo key={item.id} {...item} />
-        ))}
+        <div className="cards-tool-videos__list">
+          {videos.map((item) => (
+            <CardToolVideo key={item.id} {...item} />
+          ))}
+        </div>
       </div>
     </div>
   );

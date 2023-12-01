@@ -6,19 +6,19 @@ import OrderIcon from "@/components/ui/icons/order";
 import FilterIcon from "@/components/ui/icons/filter";
 
 export type ItemCourse = {
-  id: string;
+  id: string | number;
   title: string;
-  teacher: string;
   duration: string;
-  road: string;
-  type: string;
-  priceCurrent: string;
-  price: string;
+  road: any;
+  priceCurrent: number;
+  price: number;
   description: string;
   miniature: string;
   blocks: any[];
+  coach: any;
   students: string;
-  comments: string;
+  likes: string;
+  comments: any[];
   level: string;
   slug: string;
 };

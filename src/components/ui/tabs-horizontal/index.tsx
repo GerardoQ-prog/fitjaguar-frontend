@@ -1,6 +1,4 @@
-"use client";
-
-import React, { useState, memo } from "react";
+import { memo } from "react";
 import "./styles.scss";
 
 type Tabs = {
@@ -9,20 +7,20 @@ type Tabs = {
   selector: string;
 };
 
-interface ITabsHomeProps {
+interface ITabsProps {
   tabs: Tabs[];
   tabSelected: number;
   handleChangeTab(id: number): void;
 }
 
-const TabsHome: React.FC<ITabsHomeProps> = ({
+const TabsHorizontal: React.FC<ITabsProps> = ({
   tabs,
   tabSelected,
   handleChangeTab,
 }) => {
   return (
     <div>
-      <div className="tabs-home">
+      <div className="tabs-horizontal">
         <div className="tabs">
           <div className="tabs__container">
             {tabs.map((item, index) => (
@@ -47,4 +45,4 @@ const TabsHome: React.FC<ITabsHomeProps> = ({
   );
 };
 
-export default memo(TabsHome);
+export default memo(TabsHorizontal);

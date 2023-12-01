@@ -1,98 +1,97 @@
-{
-    "name": "documents",
-    "items": [
-        {
-            "id": 1,
-            "title": "Plan nutricional mensual",
-            "slug": "plan-nutricional-mensual",
-            "road": "croosfit",
-            "description": "<p>Gaaaaaaa</p>",
-            "image": "/images/plan-nutricional-mensual.jpg",
-            "coach": {
-                "name": "Sandra Arenas",
-                "slug": "sandra-arenas"
-            },
-            "likes": "100",
-            "comments": [
-                {
-                    "id": 1,
-                    "user": "Usuario",
-                    "comment": "Comentario de usuario 1"
-                }
-            ],
-            "pdf": "link del pdf"
+[
+    {
+        "id": 1,
+        "title": "Plan nutricional mensual",
+        "slug": "plan-nutricional-mensual",
+        "road": "croosfit",
+        "description": "<p><b>Gaaaaaaa</b></p>",
+        "image": "/images/jpg/image_doc.jpg",
+        "coach": {
+            "name": "Sandra Arenas",
+            "slug": "sandra-arenas",
+            "photo": "/images/jpg/image_fit.jpg"
         },
-        {
-            "id": 2,
-            "title": "Plan calentamiento mensual",
-            "slug": "plan-calentamiento-mensual",
-            "road": "weightlifting",
-            "description": "<p>Gaaaaaaa</p>",
-            "image": "/images/plan-nutricional-mensual.jpg",
-            "coach": {
-                "name": "Sandra Arenas",
-                "slug": "sandra-arenas"
-            },
-            "likes": "100",
-            "comments": [
-                {
-                    "id": 1,
-                    "user": "Usuario",
-                    "comment": "Comentario de usuario 1"
-                }
-            ],
-            "pdf": "link del pdf"
+        "likes": "100",
+        "comments": [
+            {
+                "id": 1,
+                "user": "Usuario",
+                "comment": "Comentario de usuario 1"
+            }
+        ],
+        "pdf": "link del pdf"
+    },
+    {
+        "id": 2,
+        "title": "Plan calentamiento mensual",
+        "slug": "plan-calentamiento-mensual",
+        "road": "weightlifting",
+        "description": "<p>Gaaaaaaa</p>",
+        "image": "/images/jpg/image_doc.jpg",
+        "coach": {
+            "name": "Sandra Arenas",
+            "slug": "sandra-arenas",
+            "photo": "/images/jpg/image_fit.jpg"
         },
-        {
-            "id": 1,
-            "title": "Introducción al Crossfit",
-            "slug": "introduccion-al-crossfit",
-            "road": "weightlifting",
-            "description": "<p>Gaaaaaaa</p>",
-            "image": "/images/plan-nutricional-mensual.jpg",
-            "likes": "100",
-            "comments": [
-                {
-                    "id": 1,
-                    "user": "Usuario",
-                    "comment": "Comentario de usuario 1"
-                }
-            ],
-            "pdf": "link del pdf"
-        },
-        {
-            "id": 2,
-            "title": "Introducción al Yoga",
-            "slug": "introduccion-al-yoga",
-            "road": "croosfit",
-            "description": "<p>Gaaaaaaa</p>",
-            "image": "/images/plan-nutricional-mensual.jpg",
-            "likes": "100",
-            "comments": [
-                {
-                    "id": 1,
-                    "user": "Usuario",
-                    "comment": "Comentario de usuario 1"
-                }
-            ],
-            "pdf": "link del pdf"
-        },
-        {
-            "id": 2,
-            "title": "Introducción al Yoga",
-            "slug": "introduccion-al-yoga",
-            "road": "weightlifting",
-            "description": "<p>Gaaaaaaa</p>",
-            "image": "/images/plan-nutricional-mensual.jpg",
-            "likes": "100",
-            "comments": [
-                {
-                    "id": 1,
-                    "user": "Usuario",
-                    "comment": "Comentario de usuario 1"
-                }
-            ],
-            "pdf": "link del pdf"
-        }
-    ]
-}
+        "likes": "100",
+        "comments": [
+            {
+                "id": 1,
+                "user": "Usuario",
+                "comment": "Comentario de usuario 1"
+            }
+        ],
+        "pdf": "link del pdf"
+    },
+    {
+        "id": 1,
+        "title": "Introducción al Crossfit",
+        "slug": "introduccion-al-crossfit",
+        "road": "weightlifting",
+        "description": "<p>Gaaaaaaa</p>",
+        "image": "/images/jpg/image_doc.jpg",
+        "likes": "100",
+        "comments": [
+            {
+                "id": 1,
+                "user": "Usuario",
+                "comment": "Comentario de usuario 1"
+            }
+        ],
+        "pdf": "link del pdf"
+    },
+    {
+        "id": 2,
+        "title": "Introducción al Yoga",
+        "slug": "introduccion-al-yoga",
+        "road": "croosfit",
+        "description": "<p>Gaaaaaaa</p>",
+        "image": "/images/jpg/image_doc.jpg",
+        "likes": "100",
+        "comments": [
+            {
+                "id": 1,
+                "user": "Usuario",
+                "comment": "Comentario de usuario 1"
+            }
+        ],
+        "pdf": "link del pdf"
+    },
+    {
+        "id": 2,
+        "title": "Introducción al Yoga",
+        "slug": "introduccion-al-yoga",
+        "road": "weightlifting",
+        "description": "<p>Gaaaaaaa</p>",
+        "image": "/images/jpg/image_doc.jpg",
+        "likes": "100",
+        "comments": [
+            {
+                "id": 1,
+                "user": "Usuario",
+                "comment": "Comentario de usuario 1"
+            }
+        ],
+        "pdf": "link del pdf"
+    }
+]

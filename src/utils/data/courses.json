@@ -1,115 +1,167 @@
-{
-    "name": "Courses",
-    "courses": [
-        {
-            "title": "Crossfit",
-            "slug": "crossfit",
-            "items": [
-                {
-                    "id": "1",
-                    "title": "Crossfit Intense Rutina",
-                    "teacher": "Sandra Arenas",
-                    "duration": "45 min",
-                    "road": "Crossfit Basico",
-                    "type": "crossfit",
-                    "priceCurrent": "100",
-                    "price": "200",
-                    "description": "<p>adasdasd</p>",
-                    "miniature": "/images/jpg/image_fit.jpg",
-                    "blocks": [
-                        {
-                            "title": "Bloque 1",
-                            "description": "¿Deseas iniciar tu nueva rutina y empezar a trabajar mejor tus hábitos saludables?, ¡Pues esta es la mejor manera!",
-                            "video": "1324657987",
-                            "recommendations": "Ejemplo de recommendations",
-                            "questions": [
-                                {
-                                    "id": 1,
-                                    "question": "¿Cuál es la diferencia entre el crossfit y el crossfit intense?",
-                                    "user": "Pepita",
-                                    "answers": [
-                                        {
-                                            "id": 1,
-                                            "user": "Usuario comentarista",
-                                            "answer": "Respuesta de prueba"
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    "coach": {
-                        "name": "Sandra Arenas",
-                        "slug": "sandra-arenas"
-                    },
-                    "students": "120",
-                    "likes": "100",
-                    "comments": [
-                        {
-                            "id": 1,
-                            "user": "Usuario comentarista",
-                            "comment": "Comentario de prueba"
-                        }
-                    ],
-                    "level": "Intermedio",
-                    "slug": "crossfit-intense-rutina"
-                }
-            ]
+[
+    {
+        "id": "1",
+        "title": "Crossfit Intense Rutina",
+        "duration": "45 min",
+        "road": {
+            "name": "Crossfit",
+            "slug": "crossfit"
         },
-        {
-            "title": "Weightlifting",
-            "slug": "weightlifting",
-            "items": [
-                {
-                    "id": "1",
-                    "title": "Curso de Weightlifting Nivel 2",
-                    "teacher": "Sandra Arenas",
-                    "duration": "45 min",
-                    "road": "Weightlifting Basico",
-                    "type": "weightlifting",
-                    "priceCurrent": "100",
-                    "price": "200",
-                    "description": "<p>adasdasd</p>",
-                    "miniature": "/images/crossfit.jpg",
-                    "blocks": [
-                        {
-                            "title": "Bloque 1",
-                            "description": "¿Deseas iniciar tu nueva rutina y empezar a trabajar mejor tus hábitos saludables?, ¡Pues esta es la mejor manera!",
-                            "video": "1324657987",
-                            "recommendations": "Ejemplo de recommendations",
-                            "questions": [
-                                {
-                                    "id": 1,
-                                    "question": "¿Cuál es la diferencia entre el crossfit y el crossfit intense?",
-                                    "user": "Pepita",
-                                    "answers": [
-                                        {
-                                            "id": 1,
-                                            "user": "Usuario comentarista",
-                                            "answer": "Respuesta de prueba"
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    "coach": {
-                        "name": "Sandra Arenas",
-                        "slug": "sandra-arenas"
-                    },
-                    "students": "120",
-                    "likes": "100",
-                    "comments": [
-                        {
-                            "id": 1,
-                            "user": "Usuario comentarista",
-                            "comment": "Comentario de prueba"
-                        }
-                    ],
-                    "level": "Intermedio",
-                    "slug": "curso-de-weightlifting-nivel-2"
-                }
-            ]
-        }
-    ]
-}
+        "priceCurrent": 100,
+        "price": 200,
+        "description": "<p>adasdasd</p>",
+        "miniature": "/images/jpg/image_fit.jpg",
+        "blocks": [
+            {
+                "title": "Bloque 1",
+                "description": "¿Deseas iniciar tu nueva rutina y empezar a trabajar mejor tus hábitos saludables?, ¡Pues esta es la mejor manera!",
+                "video": "876706732",
+                "recommendations": "Ejemplo de recommendations",
+                "questions": [
+                    {
+                        "id": 1,
+                        "question": "¿Cuál es la diferencia entre el crossfit y el crossfit intense?",
+                        "user": "Pepita",
+                        "answers": [
+                            {
+                                "id": 1,
+                                "user": "Usuario comentarista",
+                                "answer": "Respuesta de prueba"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "coach": {
+            "name": "Sandra Arenas",
+            "slug": "sandra-arenas",
+            "photo": "/images/jpg/image_fit.jpg"
+        },
+        "students": "120",
+        "likes": "100",
+        "comments": [
+            {
+                "id": 1,
+                "user": "Usuario comentarista",
+                "comment": "Comentario de prueba",
+                "photo": "/images/jpg/image_fit.jpg"
+            },
+            {
+                "id": 2,
+                "user": "Usuario comentarista",
+                "comment": "Comentario de prueba",
+                "photo": "/images/jpg/image_fit.jpg"
+            }
+        ],
+        "level": "Intermedio",
+        "slug": "crossfit-intense-rutina",
+        "calories": 385
+    },
+    {
+        "id": "2",
+        "title": "Curso de Weightlifting Nivel 2",
+        "duration": "45 min",
+        "road": {
+            "name": "Weightlifting",
+            "slug": "weightlifting"
+        },
+        "priceCurrent": 100,
+        "price": 200,
+        "description": "<p>adasdasd</p>",
+        "miniature": "/images/crossfit.jpg",
+        "blocks": [
+            {
+                "title": "Bloque 1",
+                "description": "¿Deseas iniciar tu nueva rutina y empezar a trabajar mejor tus hábitos saludables?, ¡Pues esta es la mejor manera!",
+                "video": "876706732",
+                "recommendations": "Ejemplo de recommendations",
+                "questions": [
+                    {
+                        "id": 1,
+                        "question": "¿Cuál es la diferencia entre el crossfit y el crossfit intense?",
+                        "user": "Pepita",
+                        "answers": [
+                            {
+                                "id": 1,
+                                "user": "Usuario comentarista",
+                                "answer": "Respuesta de prueba"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "coach": {
+            "name": "Sandra Arenas",
+            "slug": "sandra-arenas",
+            "photo": "/images/jpg/image_fit.jpg"
+        },
+        "students": "120",
+        "likes": "100",
+        "comments": [
+            {
+                "id": 1,
+                "user": "Usuario comentarista",
+                "comment": "Comentario de prueba",
+                "photo": "/images/jpg/image_fit.jpg"
+            }
+        ],
+        "level": "Intermedio",
+        "slug": "curso-de-weightlifting-nivel-2",
+        "calories": 385
+    },
+    {
+        "id": "3",
+        "title": "Curso de Weightlifting Nivel 2",
+        "duration": "45 min",
+        "road": {
+            "name": "Weightlifting",
+            "slug": "weightlifting"
+        },
+        "priceCurrent": 100,
+        "price": 200,
+        "description": "<p>adasdasd</p>",
+        "miniature": "/images/crossfit.jpg",
+        "blocks": [
+            {
+                "title": "Bloque 1",
+                "description": "¿Deseas iniciar tu nueva rutina y empezar a trabajar mejor tus hábitos saludables?, ¡Pues esta es la mejor manera!",
+                "video": "876706732",
+                "recommendations": "Ejemplo de recommendations",
+                "questions": [
+                    {
+                        "id": 1,
+                        "question": "¿Cuál es la diferencia entre el crossfit y el crossfit intense?",
+                        "user": "Pepita",
+                        "answers": [
+                            {
+                                "id": 1,
+                                "user": "Usuario comentarista",
+                                "answer": "Respuesta de prueba"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "coach": {
+            "name": "Sandra Arenas",
+            "slug": "sandra-arenas",
+            "photo": "/images/jpg/image_fit.jpg"
+        },
+        "students": "120",
+        "likes": "100",
+        "comments": [
+            {
+                "id": 1,
+                "user": "Usuario comentarista",
+                "comment": "Comentario de prueba",
+                "photo": "/images/jpg/image_fit.jpg"
+            }
+        ],
+        "level": "Intermedio",
+        "slug": "curso-de-weightlifting-nivel-2",
+        "calories": 385
+    }
+]

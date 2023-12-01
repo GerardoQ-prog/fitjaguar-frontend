@@ -23,13 +23,28 @@
     .statistics {
         display: flex;
         align-items: flex-start;
-        justify-content: space-between;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        div {
+            max-width: 200px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
         &__number {
             text-align: center;
             font-weight: 800;
             font-size: 36px;
             margin-bottom: 20px;
+
+            @media (max-width: 768px) {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
         }
 
         &__description {
@@ -37,6 +52,11 @@
             font-weight: 700;
             max-width: 200px;
             font-size: 18px;
+
+            @media (max-width: 768px) {
+                font-size: 14px;
+            }
+
         }
     }
 
@@ -51,8 +71,7 @@
         color: $white !important;
         margin: 20px auto;
         width: 200px !important;
-        padding: 15px 20px;
-        font-size: 18px;
         text-decoration: none !important;
+
     }
 }
